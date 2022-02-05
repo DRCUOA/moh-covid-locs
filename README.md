@@ -1,0 +1,1 @@
+# moh-covid-locs
