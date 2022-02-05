@@ -10,7 +10,7 @@ const port = 8080;
 // setup handlebars
 const handlebars = require("express-handlebars");
 app.engine("handlebars", handlebars({
-    defaultLayout: "main"
+    defaultLayout: "main-layout"
 }));
 
 app.set("view engine", "handlebars");
@@ -34,12 +34,8 @@ const { addUserToLocals } = require("./middleware/auth-middleware");
 app.use(addUserToLocals);
 
 // setup routers
-
-// const adminRouter = require("./routes/admin-rotes");
-// app.use(adminRouter);
-
-// const applicationRouter = require("./routes/application-routes");
-// app.use(applicationRouter);
+const applicationRouter = require("./routes/application-routes");
+    app.use(applicationRouter);
 
 // start the server running
 const server = app.listen(port, function(){

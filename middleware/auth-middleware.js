@@ -1,5 +1,5 @@
 // user auth middleware
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
 // const userDao = require("../modules/user-dao");
@@ -22,4 +22,13 @@ function addUserToLocals(req, res, next) {
     }
 }
 
-module.exports = { addUserToLocals };
+function verifyAuthenticated(req, res, next) {
+console.log('verifyAuthenticated called');
+        next();
+}
+
+module.exports = { 
+    router,
+    verifyAuthenticated,
+    addUserToLocals
+    };
