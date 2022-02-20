@@ -40,6 +40,6 @@ const applicationRouter = require("./routes/application-routes");
 // start the server running
 const server = app.listen(port, function(){
     const host = 'localhost';
-    console.log(`COVID-19 Locs of Interest NZ App V0.1 Beta | App listening on http://${host}:${port}`)
+    console.log(`Test Node.js Express Webapp 1.0 | App listening on http://${host}:${port}`)
 })
 
