@@ -1,6 +1,6 @@
 {{!-- index html handbar view --}}
 <section class="main-container">
-    
+
     <header>
         <h1>Hero Header</h1>
     </header>
@@ -10,16 +10,44 @@
     </main-nav>
 
     <hero-content>
-        <card class="loc">
-            Data Insert
-                <p>{{result}}</p>
-        </card>
+        <card class="locations-of-interest">
+            <table>
+                <thead>
+                    <script type="text/javascript" src="/client-filter.js"></script>
+                    <tr>
+                        <th>id</th>
+                        <th>Event</th>
+                        <th>Location</th>
+                        <th>City</th>
+                        <th>Co-Ordinates</th>
+                    </tr>
+                    <tr>
+                        <th><input type="text" placeholder="filter:id" id="idFilter"></th>  
+                        <th><input type="text" placeholder="filter:event" id="eventFilter"></th>          
+                        <th><input type="text" placeholder="filter:loc" id="locationFilter"></th>
+                        <th><input type="text" placeholder="filter:city" id="cityFilter"></th>
+                        <th><input type="text" placeholder="filter:any" id="AnyFilter"></th>
+                    </tr>
+                </thead>
+                {{#each currentLocations}}
+                    <tr>
+                        <td>{{id}}</td>    
+                        <td>{{Event}}</td>
+                        <td>{{Location}}</td>
+                        <td>{{City}}</td>
+                        <td>Lat:{{LAT}} Lng:{{LNG}}</td>
+                    </tr>
+                {{/each}}
+            </table>
+            
+                {{!-- inserted by client js --}}
+                
+                <li>{{Event}} {{Location}} {{ExposureType}}</li>
+            
+            </card>
     </hero-content>
 
-    <second-nav>
-        <h6> right context area</h6>
-    </second-nav>
-
+   
     <footer>
         <h6> footer</h6>
     </footer>
