@@ -1,0 +1,27 @@
+{{!-- multer upload forms --}}
+
+ 
+ <!--  SINGLE FILE -->
+<form action="/uploadfile" enctype="multipart/form-data" method="POST"> 
+   <label for="myFile">Upload a new file here:</label>
+   <input id="inpFile" type="file" name="myFile">
+   <button type="submit">Upload</button>
+</form>
+ <br>
+ <br>
+ 
+<!-- MULTIPLE FILES -->
+{{!--  
+<form action="/uploadmultiple"  enctype="multipart/form-data" method="POST">
+  <label for="myFiles">Upload a new file here:</label>
+  <input id="inpFiles" type="file" name="myFiles" multiple>
+  <button type="submit">Upload multiple files</button>
+</form>
+ <br>
+ <br>
+  <!--   PHOTO-->
+ 
+<form action="/upload/photo" enctype="multipart/form-data" method="POST"> 
+  <input type="file" name="myImage" accept="image/*" />
+  <input type="submit" value="Upload Photo"/> --}}
+</form>

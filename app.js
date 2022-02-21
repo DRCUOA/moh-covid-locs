@@ -19,14 +19,13 @@ app.set("view engine", "handlebars");
 
 app.use(express.urlencoded({extended: false}));
 
+// make a public folder available statically
+const path = require("path");
+app.use(express.static(path.join(__dirname, "public")));
+
 // setup cookie-parser
 const cookieParser = require("cookie-parser");
 app.use(cookieParser());
-
-// make a public folder available statically
-
-const path = require("path");
-app.use(express.static(path.join(__dirname, "public")));
 
 // setup middleware
 
@@ -36,6 +35,7 @@ app.use(addUserToLocals);
 // setup routers
 const applicationRouter = require("./routes/application-routes");
     app.use(applicationRouter);
+
 
 
 // start the server running
