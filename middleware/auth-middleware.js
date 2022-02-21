@@ -5,7 +5,7 @@ const router = express.Router();
 // const userDao = require("../modules/user-dao");
 
 function addUserToLocals(req, res, next) {
-    const user = 'TestUser';
+    const user = 'This function is a placeholder user';
     // await userDao.retrieveUserwithAuthToken(req.cookies.authToken);
 
     try {
@@ -23,7 +23,7 @@ function addUserToLocals(req, res, next) {
 }
 
 function verifyAuthenticated(req, res, next) {
-console.log('verifyAuthenticated called');
+console.log('verifyAuthenticated called but current does bugger all');
         next();
 }
 

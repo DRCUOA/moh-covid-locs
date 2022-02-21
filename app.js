@@ -37,6 +37,7 @@ app.use(addUserToLocals);
 const applicationRouter = require("./routes/application-routes");
     app.use(applicationRouter);
 
+
 // start the server running
 const server = app.listen(port, function(){
     const host = 'localhost';
